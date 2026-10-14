@@ -37,9 +37,9 @@ export default function App() {
     </section>)}
    </div>
    <CTASection
-    heading={de ? 'Fehlt ein Social AI Club an deiner Universität oder in deiner Stadt?' : 'Missing a Social AI Club at your university or in your city?'}
-    text={de ? 'Du möchtest Menschen für KI und Social Entrepreneurship zusammenbringen? Schreib uns – wir freuen uns, von deiner Idee zu hören.' : 'Want to bring people together around AI and social entrepreneurship? Get in touch — we’d love to hear your idea.'}
-    buttons={[{label: de ? 'Schreib uns' : 'Contact us', href: 'https://tum-socialaiclub.de/contact', variant: 'primary'}]}
+    heading={de ? 'Du findest, dass an deiner Universität oder in deiner Stadt ein Social AI Club fehlt?' : 'Think your university or city is missing a Social AI Club?'}
+    text={de ? 'Dann schreib uns. Wir freuen uns, von dir und deiner Idee für einen neuen Club zu hören.' : 'Write to us. We’d love to hear from you and learn about your idea for a new club.'}
+    buttons={[{label: 'Contact us', href: 'https://tum-socialaiclub.de/contact', variant: 'primary'}]}
    />
   </main>
   <Footer/>
