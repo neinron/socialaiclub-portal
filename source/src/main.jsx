@@ -1,0 +1,13 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import { LocaleProvider } from './i18n/LocaleContext';
+import App from './App';
+import './index.css';
+import '@fontsource/league-spartan/latin-400.css';
+import '@fontsource/league-spartan/latin-600.css';
+import '@fontsource/league-spartan/latin-700.css';
+import '@fontsource/albert-sans/latin-400.css';
+import '@fontsource/albert-sans/latin-500.css';
+import '@fontsource/albert-sans/latin-600.css';
+ReactDOM.createRoot(document.getElementById('root')).render(<BrowserRouter><LocaleProvider><App/></LocaleProvider></BrowserRouter>);
