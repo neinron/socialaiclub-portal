@@ -1,6 +1,5 @@
 import React from 'react';
 import { Mail } from 'lucide-react';
-import Logo from '../components/ui/Logo';
 import LanguageToggle from '../components/ui/LanguageToggle';
 import ThemeToggle from '../components/ui/ThemeToggle';
 import { useLocale } from '../i18n/LocaleContext';
@@ -40,7 +39,10 @@ export default function Footer() {
                         {/* Brand Column */}
                         <div className="flex flex-col gap-4 max-w-sm">
                             <div className="flex items-center gap-2">
-                                <Logo className="h-10 md:h-11" v6Full />
+                                <div className="h-14 md:h-16">
+                                    <img src="/assets/logos/social-ai-club-stacked-icon-dark.svg" alt="Social AI Club" className="hero-logo-light h-full w-auto"/>
+                                    <img src="/assets/logos/social-ai-club-stacked-icon-light.svg" alt="Social AI Club" className="hero-logo-dark h-full w-auto"/>
+                                </div>
                             </div>
 
                             <p className="text-[var(--text-secondary)] leading-relaxed">

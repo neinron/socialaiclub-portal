@@ -14,6 +14,12 @@ export default function ThemeToggle() {
     });
 
     useEffect(() => {
+        const syncTheme = event => setTheme(event.detail);
+        window.addEventListener('club-theme-change', syncTheme);
+        return () => window.removeEventListener('club-theme-change', syncTheme);
+    }, []);
+
+    useEffect(() => {
         const root = window.document.documentElement;
 
         const applyTheme = (targetTheme) => {
@@ -50,11 +56,8 @@ export default function ThemeToggle() {
     }, [theme]);
 
     const cycleTheme = () => {
-        setTheme(prev => {
-            if (prev === 'system') return 'light';
-            if (prev === 'light') return 'dark';
-            return 'system';
-        });
+        const nextTheme = theme === 'system' ? 'light' : theme === 'light' ? 'dark' : 'system';
+        window.dispatchEvent(new CustomEvent('club-theme-change', { detail: nextTheme }));
     };
 
     return (
